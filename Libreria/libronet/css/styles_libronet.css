@@ -1,0 +1,630 @@
+@charset "UTF-8";
+/**
+* $canvas-with: Ancho del canvas en porcentajes
+* @nuclide Variables
+* @section Settings > Canvas
+*/
+/**
+* $canvas-max-with: Máximo Ancho del canvas en pixeles, 
+* Grid 4 columnas: 240px, 
+* Grid 3 columnas: 320px, 
+* Grid 2 columnas: 480px 
+* @nuclide Variables
+* @section Settings > Canvas
+*/
+/**
+* Font family: fuentes de ícono
+* @nuclide Variables
+* @section Settings > Font family
+*/
+/**
+* Base HTML: 16px
+* @nuclide Variables
+* @section Settings > Font size
+*/
+/**
+* Font family: 'Montserrat'
+* @nuclide Variables
+* @section Settings > Font family
+*/
+/**
+* font-weight: Regular | Font family: Montserrat
+* @nuclide Variables
+* @section Settings > Font weight
+*/
+/**
+* font-weight: Medium | Font family: Montserrat
+* @nuclide Variables
+* @section Settings > Font weight
+*/
+/**
+* font-weight: Bold | Font family: Montserrat
+* @nuclide Variables
+* @section Settings > Font weight
+*/
+/**
+* font-weight: Italic
+* @nuclide Variables
+* @section Settings > Font weight
+*/
+/**
+ * Variable ruta imágenes incluidas en los CSS  | use: url(# {$path-img}/card-shadow.svg)
+ * @nuclide Variables
+ * @section Settings > Path
+ */
+/**
+ * Variable ruta a la carpeta de fuentes | use: url('# {$path-font}/# {$font-family-ico}.woff?')
+ * @nuclide Variables
+ * @section Settings > Path
+ */
+/**
+* Small
+* @nuclide Variables
+* @section Settings > Breakpoint predefinidos
+*/
+/**
+* small-m
+* @nuclide Variables
+* @section Settings > Breakpoint predefinidos
+*/
+/**
+* medium
+* @nuclide Variables
+* @section Settings > Breakpoint predefinidos
+*/
+/**
+* wide
+* @nuclide Variables
+* @section Settings > Breakpoint predefinidos
+*/
+/**
+* large
+* @nuclide Variables
+* @section Settings > Breakpoint predefinidos
+*/
+/**
+* big
+* @nuclide Variables
+* @section Settings > Breakpoint predefinidos
+*/
+/**
+* huge
+* @nuclide Variables
+* @section Settings > Breakpoint predefinidos
+*/
+/**
+* Unidad mínima la retícula digital es 8, 
+* el sistema de reticula se basa en incrementos verticales y horizontales de 8 píxeles.
+* Uso: multiplicar la variable por el número del incremento deseado. Ejemplo: $gutter * 2
+* @nuclide Variables
+* @section Settings > Gutter 
+*/
+/**
+* $canvas-with: Transición para animaciones de elementos
+* @nuclide Variables
+* @section Settings > Transition
+*/
+/**
+ * Convertir valor de (px) a (rem) de cualquier propiedad, agrega fallback en px para navegadores antiguos.
+ *
+ * @mixin
+ * @section Utils
+ * @param $property Propiedad css, ej. margin, max-width, etc..
+ * @param $values Valor en px
+ * @example
+ *  .foo {
+ *    @include px-to-rem(padding, 20px 10px);
+ *  }
+ */
+/**
+ * Incluye Font-family propiedades fuente de iconos para pseudo elementos.
+ * @mixin
+ * @section Utils
+ * @param $font-family Variable Font-family
+ * @example
+ *  .foo {
+ *		Propiedades...
+ *		&:before {
+ *    	@include font-family-ico($font-family-ico);
+ *		}
+ *  }
+ */
+/**
+ * Center-translate: Centra horizontalmente o verticalmente un elemento en su contexto. Translación en un solo eje.
+ *
+ * @mixin
+ * @section Helpers
+ * @param $axis 
+ *  Valor eje translate
+ *	♣ Default: translateX
+ *	♣ Values: translateX | translateY 
+ * @example
+ *  .foo {
+ *    @include center-translate(translateY)
+ *  }
+ *  || El @include se traducirá en:
+ *     .foo {
+ *         display: block;
+ *         position: relative;
+ *         top: 50%;
+ *         -ms-transform 	  : translateY(-50%);
+ *         -moz-transform   : translateY(-50%);
+ *         -o-transform  	  : translateY(-50%);
+ *         -webkit-transform: translateY(-50%);
+ *         transform        : translateY(-50%);
+ *     }
+ */
+/**
+ * Centra horizontalmente o verticalmente un elemento en su contexto. Translación en un solo eje.
+ *
+ * @mixin
+ * @section Helpers
+ * @param $justify
+ *	Default: center ♣
+ *	Values: center | flex-start | flex-end | space-between | space-around
+ * @param $align
+ *	Default: center ♣
+ *	Values: center | flex-start | flex-end | baseline | stretch
+ * @example
+ *  .foo {
+ *    @include center-flexbox;
+ *  }
+ *  || El @include se traducirá en:
+ *     .foo {
+ *         display: flex;
+ *         justify-content: center;
+ *         align-items    : center;
+ *     }
+ *  .foo {
+ *    @include center-flexbox(space-between)
+ *  }
+ *  || El @include se traducirá en:
+ *     .foo {
+ *         display: flex;
+ *         justify-content: space-between;
+ *         align-items    : center;
+ *     }
+ *  .foo {
+ *    @include center-flexbox(center, flex-start)
+ *  }
+ *  || El @include se traducirá en:
+ *     .foo {
+ *         display: flex;
+ *         justify-content: center;
+ *         align-items    : flex-start;
+ *     }
+ */
+/**
+ * Aplica overflow ellipsis multiples lineas de texto.
+ * Adición de CSS a un elemento que limitará la visibilidad del texto después de cierto punto. 
+ * La altura máxima en rem se calcula multiplicando:  
+ * (font-size) * (line-heigth) * (número de líneas que se quiera mostrar)
+ *
+ * @mixin
+ * @section Helpers
+ * @param $font-size Valor tamaño de fuente en px.
+ * @param $line-height Valor Alto de linea.
+ * @param $lines Número de lineas a mostrar.
+ * @example
+ *  .foo {
+ *    @include truncatechars(16px, 1.4, 3)
+ *  }
+ *  || El @include se traducirá en:
+ *     .foo {
+ *        display: block;
+ *        display: -webkit-box;
+ *        max-height: 67.2px;
+ *        max-height: 4.2rem;
+ *        overflow: hidden;
+ *        line-height: 1.4;
+ *        -webkit-line-clamp: 3;
+ *        -webkit-box-orient: vertical;
+ *        text-overflow: ellipsis;
+ *        font-size: 16px;
+ *        font-size: 1rem;
+ *     }
+ */
+/**
+ * Aplica overflow ellipsis multiples lineas de texto.
+ * Adición de CSS a un elemento que limitará la visibilidad del texto después de cierto punto. 
+ * La altura máxima en rem se calcula multiplicando:  
+ * (font-size) * (line-heigth) * (número de líneas que se quiera mostrar)
+ *
+ * @mixin
+ * @section Helpers
+ * @param $font-size Valor tamaño de fuente en px.
+ * @param $line-height Valor Alto de linea.
+ * @param $lines Número de lineas a mostrar.
+ * @example
+ *  .foo {
+ *    @include truncatechars-change(16px, 1.4, 3)
+ *  }
+ *  || Debe agregar font-size y line-height. El @include se traducirá en:
+ *     .foo {
+ *        max-height: 67.2px;
+ *        max-height: 4.2rem;
+ *     }
+ */
+body,
+h1, h2, h3, h4, h5, h6,
+dl, dd, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure,
+p {
+  margin: 0;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+a:active, a:hover {
+  outline-width: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+blockquote {
+  margin: 0;
+}
+
+audio,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+input {
+  line-height: normal;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button {
+  background-color: transparent;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  border: 0;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.o-canvas {
+  width: 90%;
+  max-width: 1240px;
+  max-width: 77.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.o-section {
+  margin-top: 64px;
+  margin-top: 4rem;
+  margin-bottom: 64px;
+  margin-bottom: 4rem;
+}
+
+.o-surface {
+  padding-top: 64px;
+  padding-top: 4rem;
+  padding-bottom: 64px;
+  padding-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/**
+ * Class: .o-hgroup
+ * @description  grupo para el encabezado de una sección.
+ * @atom Hgroup
+ * @modifiers
+ *  .o-hgroup_center Centrar el contenido
+ * @section 02. Títulos
+ * @markup
+ *	<header class="o-hgroup">
+ *	 <h2 class="o-headline"> Titular de sección</h2>
+ *	</header>
+ *	<header class="o-hgroup o-hgroup_center">
+ *	 <h2 class="o-headline"> Titular de sección</h2>
+ *	</header>
+ */
+/**
+ * Class: .o-headline
+ * @description  Titulo principal de sección. | 64 / 40
+ * @atom Headline
+ * @section 02. Títulos
+ * @markup
+ *		<h2 class="o-headline"> Titular de sección</h2>
+ */
+/**
+ * Class: .o-subheadline
+ * @description Subtitulo principal de sección.
+ * @atom Subheadline
+ * @section 02. Títulos
+ * @markup
+ *		<h2 class="o-subheadline"> Subtitular de sección</h2>
+ */
+/**
+ * Class: .o-title
+ * @description  Titulo secundario de sección
+ * @atom Title
+ * @section 02. Títulos
+ * @markup
+ *		<h3 class="o-title"> Titulo de un elemento</h3>
+ */
+/**
+ * Class: .o-subtitle
+ * @description  Subtitulo secundario de sección
+ * @atom Subtitle
+ * @section 02. Títulos
+ * @markup
+ *		<h3 class="o-subtitle"> Subtitulo de un elemento</h3>
+ */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline-width: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.o-img {
+  width: 100%;
+}
+
+.o-list {
+  list-style: none;
+}

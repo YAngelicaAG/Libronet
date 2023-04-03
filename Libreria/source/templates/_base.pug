@@ -1,0 +1,52 @@
+//- Variables Templates
+block variables
+
+//- Variables globales
+-var page_language    = 'es'
+-var root_static    = './static'
+-var root_img       = './static/images'
+
+
+doctype html
+html(lang=page_language)(class={'t-asigna': page == 'asigna'})
+
+  //- Head html
+  head
+    meta(charset='utf-8')
+    title #{ page_title }
+    meta(
+      name='author'
+      content=page_author
+    )
+    meta(
+      http-equiv='X-UA-Compatible'
+      content='IE=edge'
+    )
+    //- responsive
+    meta(
+      name='viewport'
+      content='width=device-width, initial-scale=1'
+    )
+
+    //- favicon
+    link(rel="apple-touch-icon" sizes="180x180" href=`${ root_img }/favicon/apple-touch-icon.png`)
+    link(rel="icon" type="image/png" sizes="32x32" href=`${ root_img }/favicon/favicon-32x32.png`)
+    link(rel="icon" type="image/png" sizes="16x16" href=`${ root_img }/favicon/favicon-16x16.png`)
+    link(rel="manifest" href=`${ root_img }/favicon/site.webmanifest`)
+    link(rel="mask-icon" href=`${ root_img }/favicon/safari-pinned-tab.svg` color=`#5bbad5`)
+
+    meta(name="msapplication-TileColor" content="#002454")
+    meta(name="msapplication-TileImage" content=`${ root_img }/favicon/mstile-144x144.png`)
+    meta(name="theme-color" content="#002454")
+
+    //- CSS theme
+    link(
+      rel='stylesheet'
+      data-senna-track='emporary'
+      type='text/css'
+      href=`${ root_static }/css/theme_bmv.css`
+    )
+
+  body
+    block content
+      h1 Hello!
