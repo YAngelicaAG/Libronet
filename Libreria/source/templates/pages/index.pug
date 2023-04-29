@@ -3,8 +3,26 @@ extends ../_base
 block variables
 
   //- variables head meta
-  -var page    = 'Libronet'
-  -var page_title       = 'Home'
-  -var page_author      = 'Angelica Aguilar'
+  -var page = 'Libronet'
+  -var page_title = 'Home'
+  -var page_author = 'Angelica Aguilar'
 
 block content
+
+  include ../includes/components/_c02_search.pug
+
+  include ../includes/components/_c03_filters.pug
+
+  include ../includes/components/_c04_chips.pug
+
+  .o-canvas
+    header.o-hgroup
+      h2.o-headline Lo más visto de
+        span.o-headline_blue PROGRAMACIÓN
+
+  include ../includes/components/_c01_cards.pug
+
+  
+
+
+  
