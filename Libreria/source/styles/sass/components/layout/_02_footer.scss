@@ -1,0 +1,23 @@
+.c-footer {
+  background-color: $c-primary-blue;
+  @include px-to-rem(padding, $gutter * 12 $gutter * 8);
+  @include px-to-rem(margin-top, $gutter * 8);
+}
+
+.c-footer__text {
+  position: relative;
+  @include px-to-rem(padding, $gutter * 4);
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 70%;
+    height: 1px;
+    background-color: $c-surface-gray-30;
+  }
+}

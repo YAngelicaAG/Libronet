@@ -1,0 +1,21 @@
+.c-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include px-to-rem(padding-top, $gutter * 3);
+  @include px-to-rem(padding-bottom, $gutter * 2);
+  @include px-to-rem(margin-bottom, $gutter * 7);
+}
+.c-header__brand {
+
+}
+.c-header__img {
+
+}
+.c-header__button {
+  border: none;
+  &::before {
+    color: $c-primary-blue;
+    @include px-to-rem(font-size, 24px);
+  }
+}
