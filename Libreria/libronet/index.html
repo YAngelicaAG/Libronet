@@ -14,8 +14,105 @@
     <meta name="msapplication-TileColor" content="#002454">
     <meta name="msapplication-TileImage" content="./static/images/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#002454">
-    <link rel="stylesheet" data-senna-track="emporary" type="text/css" href="./static/css/theme_bmv.css">
+    <link rel="stylesheet" data-senna-track="emporary" type="text/css" href="./css/styles_libronet.css">
   </head>
   <body>
+    <div class="o-canvas"> 
+      <header class="c-header"> 
+        <figure class="c-header__brand"><img class="c-header__img" src="images/logo-libronet.svg" alt="Logo libronet"></figure>
+        <button class="c-header__button i-menu" type="button"></button>
+      </header>
+    </div>
+    <main>
+      <div class="o-canvas">
+        <div class="c-wrap-search">
+          <div class="c-search i-search">
+            <input class="c-search_input" type="text" placeholder="Busca un libro">
+          </div>
+          <button class="c-filter-btn i-filter" type="button"> <span class="c-filter-btn__text">Filtros</span></button>
+        </div>
+      </div>
+      <div class="c-box-filters-background"> 
+        <aside class="c-box-filters"> 
+          <button class="c-box-filters__btn-close i-close" type="button"></button>
+          <form class="c-box-filters__form" action=""> 
+            <div class="c-box-filters__dropdown">
+              <h4 class="c-box-filters__dropdown-title i-chevron-left">Categorías</h4>
+              <ul class="o-form__option-list">
+                <li class="o-form__option-item">
+                  <input class="o-form__option-input" type="checkbox" name="idiomas">
+                  <label class="c-filter__option-label" for="idiomas">Idiomas</label>
+                </li>
+                <li class="o-form__option-item">
+                  <input class="o-form__option-input" type="checkbox" name="autor">
+                  <label class="c-filter__option-label" for="autor">Autor</label>
+                </li>
+              </ul>
+            </div>
+            <div class="c-box-filters__cta">
+              <button class="o-btn-primary" type="button">Aplicar filtros</button>
+            </div>
+          </form>
+        </aside>
+      </div>
+      <ul class="o-chip__list">
+        <li class="o-chip__item"> <span class="o-chip__text i-after-close">Programación</span></li>
+        <li class="o-chip__item"> <span class="o-chip__text i-after-close">Programación</span></li>
+        <li class="o-chip__item"> <span class="o-chip__text i-after-close">Programación</span></li>
+      </ul>
+      <div class="o-canvas">
+        <header class="o-hgroup">
+          <h2 class="o-headline">Lo más visto de<span class="o-headline_blue">PROGRAMACIÓN</span></h2>
+        </header>
+      </div>
+      <div class="o-canvas">
+        <section class="c-grid"> 
+          <article class="c-card"> 
+            <div class="c-card_wrap-img">
+              <figure class="c-card_figure"><img class="c-card_image" src="https://images.cdn3.buscalibre.com/fit-in/360x360/e8/24/e824f4d5c2ac00478a659ce59f31b0f2.jpg" alt=""></figure>
+            </div>
+            <div class="c-card_caption"> 
+              <h3 class="c-card-title">Como ganar amigos e influir sobre las personas</h3>
+              <p class="c-card-subtitle">Dale Carnegie</p>
+              <div class="c-card-stars"> 
+                <div class="estrella"></div>
+              </div>
+              <p class="c-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequuntur ullam repellendus fugiat.</p>
+            </div>
+          </article>
+          <article class="c-card"> 
+            <div class="c-card_wrap-img">
+              <figure class="c-card_figure"><img class="c-card_image" src="https://images.cdn3.buscalibre.com/fit-in/360x360/f7/02/f70261428450baeb598dde9e0bce7fc8.jpg" alt=""></figure>
+            </div>
+            <div class="c-card_caption"> 
+              <h3 class="c-card-title">Como ganar amigos e influir sobre las personas</h3>
+              <p class="c-card-subtitle">Dale Carnegie</p>
+              <div class="c-card-stars"> 
+                <div class="estrella"></div>
+              </div>
+              <p class="c-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequuntur ullam repellendus fugiat.</p>
+            </div>
+          </article>
+          <article class="c-card"> 
+            <div class="c-card_wrap-img">
+              <figure class="c-card_figure"><img class="c-card_image" src="https://images.cdn1.buscalibre.com/fit-in/360x360/61/45/614548e593780a204fe4c31c045a284c.jpg" alt=""></figure>
+            </div>
+            <div class="c-card_caption"> 
+              <h3 class="c-card-title">Como ganar amigos e influir sobre las personas</h3>
+              <p class="c-card-subtitle">Dale Carnegie</p>
+              <div class="c-card-stars"> 
+                <div class="estrella"></div>
+              </div>
+              <p class="c-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequuntur ullam repellendus fugiat.</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer class="c-footer">
+      <div class="o-canvas">
+        <p class="c-footer__text">Copyright © Libronet 2023 </p>
+      </div>
+    </footer>
   </body>
 </html>
