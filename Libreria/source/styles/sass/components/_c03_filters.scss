@@ -1,0 +1,73 @@
+.c-box-filters-background {
+  position: absolute;
+  right: 0;
+  top: 90px;
+  width: 100%;
+  height: 100%;
+  @include px-to-rem(max-width, 420px);
+  margin-left: auto;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: $c-neutro;
+    opacity: .8;
+  }
+}
+.c-box-filters {
+  position: relative;
+  background-color: $c-neutro;
+  @include px-to-rem(padding, 24px);
+}
+
+.c-box-filters__btn-close {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  border: 2px solid $c-primary-blue;
+  border-radius: 100%;
+  @include px-to-rem(padding, $gutter);
+  &::before {
+    color: $c-primary-blue;
+  }
+}
+
+.c-box-filters__form,
+.c-box-filters__dropdown {
+  @include px-to-rem(margin-top, $gutter * 3);
+}
+.c-box-filters__form {
+
+}
+.c-box-filters__dropdown {
+
+}
+
+.c-box-filters__dropdown-title {
+  display: flex;
+  justify-content: space-between;
+  @include px-to-rem(font-size, 24px);
+  &::before {
+    order: 2;
+    transform: rotate(-90deg);
+    @include px-to-rem(font-size, 11px);
+    color: $c-secondary-green;
+  }
+}
+
+.c-box-filters__group {
+  display: flex;
+  flex-direction: column;
+  @include px-to-rem(row-gap, $gutter * 2);
+  @include px-to-rem(margin-left, $gutter);
+  @include px-to-rem(padding-top, $gutter * 3 );
+  @include px-to-rem(padding-bottom, $gutter * 3 );
+}
+
+.c-box-filters__cta {
+  display: flex;
+  justify-content: center;
+  @include px-to-rem(padding, $gutter * 3)
+}

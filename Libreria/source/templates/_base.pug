@@ -44,9 +44,15 @@ html(lang=page_language)(class={'t-asigna': page == 'asigna'})
       rel='stylesheet'
       data-senna-track='emporary'
       type='text/css'
-      href=`${ root_static }/css/theme_bmv.css`
+      href=`./css/styles_libronet.css`
     )
 
   body
-    block content
-      h1 Hello!
+    
+    include ./includes/components/layout/_l01_header.pug 
+
+    main
+      block content
+
+    
+    include ./includes/components/layout/_l02_footer.pug 

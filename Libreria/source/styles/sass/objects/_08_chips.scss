@@ -1,0 +1,28 @@
+.o-chip__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @include px-to-rem(margin-bottom, $gutter * 5);
+  @include px-to-rem(row-gap, $gutter * 2);
+  @include px-to-rem(column-gap, $gutter * 2);
+  width: 100%;
+}
+
+.o-chip__item  {
+  @include px-to-rem(padding, $gutter * 2);
+  border: 1px solid $c-secondary-green;
+  @include px-to-rem(border-radius, 50px);
+}
+
+.o-chip__text {
+  display: flex;
+  align-items: center;
+  @include px-to-rem(column-gap, $gutter);
+  &::after {
+    cursor: pointer;
+    @include px-to-rem(font-size, 12px);
+    color: $c-secondary-green;
+  }
+}

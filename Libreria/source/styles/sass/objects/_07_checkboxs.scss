@@ -1,0 +1,97 @@
+.o-form__option-list { 
+  display: flex;
+  flex-direction: column;
+  @include px-to-rem(margin-top, $gutter * 2);
+  @include px-to-rem(row-gap, $gutter);
+  list-style: none;
+}
+
+.o-form__option-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.o-form__option-input {
+  &[type="checkbox"],
+  &[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+
+    & + label {
+      
+      display: inline-flex;
+      align-items: center;
+
+      &:before {
+        content: "";
+        cursor: pointer;
+        display: block;
+        @include px-to-rem(min-width, $gutter * 2);
+        @include px-to-rem(max-width, $gutter * 2);
+        @include px-to-rem(height, $gutter * 2);
+        @include px-to-rem(margin-right, $gutter * 2);
+        border: 2px solid $c-primary-blue;
+        @include px-to-rem(line-height, 18px);
+        @include px-to-rem(font-size, 12px);
+        text-align: center;
+        pointer-events: none;
+        transition: all 0.2s ease;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        @include px-to-rem(min-width, 10px);
+        @include px-to-rem(max-width, 10px);
+        @include px-to-rem(height, 10px);
+        border-radius: 50%;
+        background-color: transparent;
+        transform: translateX(5px);
+        transition: all 0.2s ease;
+      }
+    }
+  }
+
+  &[type="checkbox"] {
+    & + label {
+      &::before {
+        content: $i-check;
+        @include px-to-rem(border-radius, 4px);
+        font-family: #{$font-family-ico};
+        color: transparent;
+      }
+    }
+
+    &:checked + label {
+      &::before {
+        color: $c-neutro;
+        background-color: $c-primary-blue;
+      }
+    }
+  }
+
+  &[type="radio"] {
+    & + label {
+      &:before {
+        @include px-to-rem(border-radius, 50px);
+      }
+    }
+    &:checked + label {
+      &:before {
+        background-color: gold;
+      }
+
+      &::after {
+        background-color: green;
+      }
+    }
+  }
+}

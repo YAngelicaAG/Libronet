@@ -13,99 +13,26 @@ h6 {
   line-height: 1.2;
 }
 
-/**
- * Class: .o-hgroup
- * @description  grupo para el encabezado de una sección.
- * @atom Hgroup
- * @modifiers
- *  .o-hgroup_center Centrar el contenido
- * @section 02. Títulos
- * @markup
- *	<header class="o-hgroup">
- *	 <h2 class="o-headline"> Titular de sección</h2>
- *	</header>
- *	<header class="o-hgroup o-hgroup_center">
- *	 <h2 class="o-headline"> Titular de sección</h2>
- *	</header>
- */
-
 .o-hgroup {
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include px-to-rem(max-width, 350px);
+  @include px-to-rem(margin-bottom, $gutter * 8);
+  &::after {
+    content: "";
+    width: 20%;
+    height: 1px;
+    background-color: $c-primary-blue;
+  }
 }
-
-.o-hgroup_center {
-
-}
-
-/**
- * Class: .o-headline
- * @description  Titulo principal de sección. | 64 / 40
- * @atom Headline
- * @section 02. Títulos
- * @markup
- *		<h2 class="o-headline"> Titular de sección</h2>
- */
 
 .o-headline {
-  
+  @include px-to-rem(font-size, $gutter * 4);
 }
-
-/**
- * Class: .o-subheadline
- * @description Subtitulo principal de sección.
- * @atom Subheadline
- * @section 02. Títulos
- * @markup
- *		<h2 class="o-subheadline"> Subtitular de sección</h2>
- */
-.o-subheadline {
-
-}
-
-/**
- * Class: .o-title
- * @description  Titulo secundario de sección
- * @atom Title
- * @section 02. Títulos
- * @markup
- *		<h3 class="o-title"> Titulo de un elemento</h3>
- */
- .o-title {
-
-}
-
-/**
- * Class: .o-subtitle
- * @description  Subtitulo secundario de sección
- * @atom Subtitle
- * @section 02. Títulos
- * @markup
- *		<h3 class="o-subtitle"> Subtitulo de un elemento</h3>
- */
-.o-subtitle {
-  
-}
-
-
-// DK
-@media only screen and (min-width: 940px) {
-  .o-hgroup_center {
-    
-  }
-
-  .o-headline {
-    
-  }
-
-  .o-subheadline {
-    
-  }
-
-  .o-subtitle {
-    
-  }
-
-  .o-title {
-    
-  }  
+.o-headline_blue {
+  display: block;
+  @include px-to-rem(font-size, $gutter * 4);
+  text-transform: uppercase;
+  color: $c-primary-blue;
 }

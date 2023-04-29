@@ -1,3 +1,15 @@
 // -*------------------------------------*
 // -   .o- class Objects Botones y enlaces.
 // -*------------------------------------*
+
+.o-btn-primary {
+  border: none;
+  background-color: $c-secondary-green;
+  color: $c-neutro;
+  @include px-to-rem(padding, $gutter * 2);
+  border-radius: 50px;
+  transition: all .2s;
+  &:hover {
+    @include px-to-rem(font-size, 15px);
+  }
+}

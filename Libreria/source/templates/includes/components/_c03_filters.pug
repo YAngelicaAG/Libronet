@@ -1,0 +1,19 @@
+.c-box-filters-background 
+  aside.c-box-filters 
+    button(type="button").c-box-filters__btn-close.i-close
+    
+    form(action="").c-box-filters__form 
+      .c-box-filters__dropdown
+        h4.c-box-filters__dropdown-title.i-chevron-left Categorías
+        ul.o-form__option-list
+          li.o-form__option-item
+            input(type="checkbox", name="idiomas").o-form__option-input
+            label(for="idiomas").c-filter__option-label Idiomas
+
+          li.o-form__option-item
+            input(type="checkbox", name="autor").o-form__option-input
+            label(for="autor").c-filter__option-label Autor
+
+
+      .c-box-filters__cta
+        button(type="button").o-btn-primary Aplicar filtros

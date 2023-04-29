@@ -10,8 +10,8 @@
 // - Icommon Font Ico
 @font-face {
   font-family: '#{$font-family-ico}';
-  src: url('#{$path-font}/#{$font-family-ico}.eot?qqnr5');
-  src: url('#{$path-font}/#{$font-family-ico}.eot?#iefix') format('embedded-opentype'), url('#{$path-font}/#{$font-family-ico}.ttf?qqnr5') format('truetype'), url('#{$path-font}/#{$font-family-ico}.woff?qqnr5') format('woff'), url('#{$path-font}/#{$font-family-ico}.svg?qqnr5##{$font-family-ico}') format('svg');
+  src: url('./#{$path-font}/#{$font-family-ico}.eot?qqnr5');
+  src: url('./#{$path-font}/#{$font-family-ico}.eot?#iefix') format('embedded-opentype'), url('./#{$path-font}/#{$font-family-ico}.ttf?qqnr5') format('truetype'), url('./#{$path-font}/#{$font-family-ico}.woff?qqnr5') format('woff'), url('./#{$path-font}/#{$font-family-ico}.svg?qqnr5##{$font-family-ico}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,7 +35,11 @@
 }
 
 // - V 1.0
-
+.i-check {
+  &:before {
+    content: $i-check; 
+  }
+}
 .i-chevron-left {
   &:before {
     content: $i-chevron-left; 
@@ -53,6 +57,11 @@
 }
 .i-close {
   &:before {
+    content: $i-close; 
+  }
+}
+.i-after-close {
+  &:after {
     content: $i-close; 
   }
 }

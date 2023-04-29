@@ -6,3 +6,11 @@
 // -   Único lugar donde se permite usar !important
 // -   Ej: .u-none, .u-block, .u-hidden
 // -*------------------------------------*
+
+.u-position-relative {
+  position: relative;
+}
+
+.u-green-text {
+  color: $c-secondary-green;
+}
