@@ -1,0 +1,56 @@
+.c-search {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  @include px-to-rem(margin-bottom, $gutter * 4);
+  width: 100%;
+  @include px-to-rem(max-width, 500px);
+  &::before {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $c-primary-blue;
+    @include px-to-rem(font-size, 18px);
+    @include px-to-rem(margin-right, $gutter * 2);
+  }
+  
+}
+.c-search_input {
+  width: inherit;
+  @include px-to-rem(padding-bottom, 20px);
+  @include px-to-rem(padding-left, $gutter * 4);
+  @include px-to-rem(padding-right, $gutter * 7);
+  @include px-to-rem(padding-top, 20px);
+  border-radius: 50px;
+  border-left: 1px;
+  border-bottom: 1px;
+  border-right: 0;
+  border-top: 0;
+  border-style: solid;
+  border-color: $c-primary-blue;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.c-filter-btn {
+  border: none;
+  display: flex;
+  @include px-to-rem(column-gap, $gutter);
+  margin: 0 auto;
+  @include px-to-rem(margin-bottom, $gutter * 5);
+  @include px-to-rem(font-size, 20px);
+  color: $c-secondary-green;
+}
+.c-filter-btn__text {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+ 
+}
