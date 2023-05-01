@@ -1,0 +1,43 @@
+[
+  {
+    "titulo": "Como ganar amigos e influir en las personas",
+    "autor": "Dale Carnegie",
+    "idioma": "Español",
+    "categoria": "Desarrollo personal",
+    "imagen": "https://images.cdn3.buscalibre.com/fit-in/360x360/e8/24/e824f4d5c2ac00478a659ce59f31b0f2.jpg",
+    "precio": "25.000"
+  },
+  {
+    "titulo": "El hombre más rico de babilonia",
+    "autor": "George S. Clason",
+    "idioma": "Español",
+    "categoria": "Desarrollo personal",
+    "imagen": "https://images.cdn3.buscalibre.com/fit-in/360x360/f7/02/f70261428450baeb598dde9e0bce7fc8.jpg",
+    "precio": "15.000"
+  },
+  {
+    "titulo": "Misery",
+    "autor": "STEPHEN KING",
+    "idioma": "Español",
+    "categoria": "Ciencia ficción",
+    "imagen": "https://images.cdn2.buscalibre.com/fit-in/360x360/75/2d/752dea57eb4293211b766526d87a064e.jpg",
+    "precio": "42.500"
+  },
+  {
+    "titulo": "Apocalipsis",
+    "autor": "STEPHEN KING",
+    "idioma": "Español",
+    "categoria": "Ciencia ficción",
+    "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/61/45/614548e593780a204fe4c31c045a284c.jpg",
+    "precio": "55.450"
+  },
+  {
+    "titulo": "Interface Circuits for Microsensor Integrated Systems",
+    "autor": "Giuseppe Ferri , Vincenzo Stornelli (Eds.)",
+    "idioma": "Inglés",
+    "categoria": "Tecnología",
+    "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/61/45/614548e593780a204fe4c31c045a284c.jpg",
+    "precio": "18.000"
+  }
+
+]

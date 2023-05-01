@@ -19,12 +19,6 @@ h6 {
   justify-content: space-between;
   @include px-to-rem(max-width, 350px);
   @include px-to-rem(margin-bottom, $gutter * 8);
-  &::after {
-    content: "";
-    width: 20%;
-    height: 1px;
-    background-color: $c-primary-blue;
-  }
 }
 
 .o-headline {

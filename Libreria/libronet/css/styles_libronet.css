@@ -666,12 +666,6 @@ h6 {
   margin-bottom: 64px;
   margin-bottom: 4rem;
 }
-.o-hgroup::after {
-  content: "";
-  width: 20%;
-  height: 1px;
-  background-color: #9BD4D1;
-}
 
 .o-headline {
   font-size: 32px;
@@ -1021,6 +1015,16 @@ a {
   margin-top: 1rem;
 }
 
+.c-card__price {
+  margin-top: 16px;
+  margin-top: 1rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 @media only screen and (min-width: 600px) {
   .c-grid {
     display: -webkit-box;
@@ -1037,8 +1041,8 @@ a {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 32px;
-  margin-bottom: 2rem;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
   width: 100%;
   max-width: 500px;
   max-width: 31.25rem;

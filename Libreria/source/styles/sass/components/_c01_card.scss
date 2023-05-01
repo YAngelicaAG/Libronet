@@ -58,6 +58,13 @@
   @include px-to-rem(margin-top, $gutter * 2);
 }
 
+.c-card__price {
+  @include px-to-rem(margin-top, $gutter * 2);
+  @include px-to-rem(margin-bottom, $gutter * 2);
+  @include px-to-rem(font-size, 24px);
+  font-weight: $f-bold;
+}
+
 @media only screen and (min-width: 600px) {
   .c-grid { 
     display: flex;
