@@ -6,16 +6,48 @@
   @include px-to-rem(padding-bottom, $gutter * 2);
   @include px-to-rem(margin-bottom, $gutter * 7);
 }
-.c-header__brand {
 
-}
-.c-header__img {
-
-}
 .c-header__button {
   border: none;
   &::before {
     color: $c-primary-blue;
     @include px-to-rem(font-size, 24px);
   }
+}
+
+.c-header__btn-wrap {
+  position: relative;
+}
+.c-header__btn-counter {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  @include px-to-rem(height, 25px);
+  @include px-to-rem(width, 25px);
+  background-color: $c-tertiary; 
+  color: $c-neutro;
+  border-radius: 100%;
+}
+
+.c-header__cart-wrap {
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  min-width: 300px;
+  @include px-to-rem(padding, $gutter * 3);
+  right: 0;
+  background-color: $c-neutro;
+  box-shadow: $c-shadow-13;
+}
+
+.c-header__cart-item {
+  display: flex;
+  align-items: center;
+  @include px-to-rem(column-gap, $gutter);
+  @include px-to-rem(margin-bottom, $gutter * 2);
+}
+.c-header__cart-btn {
+  border: 0;
 }
