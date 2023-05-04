@@ -15,14 +15,24 @@
     <meta name="msapplication-TileImage" content="./static/images/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#002454">
     <link rel="stylesheet" data-senna-track="emporary" type="text/css" href="./css/styles_libronet.css">
-    <script src="js/traer-datos.js" defer> </script>
-    <script src="js/search.js" defer> </script>
+    <script src="js/traer-datos.js" defer></script>
+    <script src="js/shopping-cart.js" defer></script>
   </head>
   <body>
     <div class="o-canvas"> 
       <header class="c-header"> 
         <figure class="c-header__brand"><img class="c-header__img" src="images/logo-libronet.svg" alt="Logo libronet"></figure>
-        <button class="c-header__button i-menu" type="button"></button>
+        <div class="c-header__btn-wrap">
+          <button class="c-header__button i-cart" type="button"></button><span class="c-header__btn-counter js-cart-counter">l15</span>
+          <div class="c-header__cart-wrap">
+            <ul class="c-header__cart-list js-cart-list">
+              <li class="c-header__cart-item js-cart-item"> <span>1</span><span class="js-cart-item-name">Como ganar amigos e influir en las personas </span><span>$90.000</span>
+                <button class="c-header__cart-btn js-btn-remove-item i-close" type="button"></button>
+              </li>
+            </ul>
+            <div class="c-header__cart-total js-cart-total">valor total $ 50.000</div>
+          </div>
+        </div>
       </header>
     </div>
     <main>
