@@ -35,6 +35,12 @@
 }
 
 // - V 1.0
+
+.i-cart {
+  &:before {
+    content: $i-cart; 
+  }
+}
 .i-check {
   &:before {
     content: $i-check; 
