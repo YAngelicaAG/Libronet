@@ -36,18 +36,38 @@
   position: absolute;
   z-index: 1;
   min-width: 300px;
-  @include px-to-rem(padding, $gutter * 3);
+  @include px-to-rem(padding, $gutter * 5);
   right: 0;
   background-color: $c-neutro;
   box-shadow: $c-shadow-13;
+  @include px-to-rem(border-radius, 24px);
 }
 
 .c-header__cart-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   @include px-to-rem(column-gap, $gutter);
-  @include px-to-rem(margin-bottom, $gutter * 2);
+  @include px-to-rem(margin-bottom, $gutter * 4);
 }
 .c-header__cart-btn {
   border: 0;
+  &::before {
+    @include px-to-rem(font-size, 14px);
+    color: $c-secondary-green;
+  }
+}
+.c-header__cart-total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include px-to-rem(margin-top, $gutter * 5);
+  @include px-to-rem(padding-top, $gutter * 3);
+  border-top: 1px solid $c-primary-blue;
+}
+
+@media only screen and (min-width: 600px) {
+  .c-header__cart-wrap {
+    @include px-to-rem(min-width, 500px);
+  }
 }

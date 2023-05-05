@@ -91,6 +91,6 @@ const showItemsCart = () => {
 
   })
 
-  totalValue.innerText = `$${total}`;
+  totalValue.innerText = `Total: $${total}`;
   countProducts.innerText = totalProducts;
 }
