@@ -17,14 +17,15 @@
     <link rel="stylesheet" data-senna-track="emporary" type="text/css" href="./css/styles_libronet.css">
     <script src="js/traer-datos.js" defer></script>
     <script src="js/shopping-cart.js" defer></script>
+    <script src="js/toggle.js" defer></script>
   </head>
   <body>
     <div class="o-canvas"> 
       <header class="c-header"> 
         <figure class="c-header__brand"><img class="c-header__img" src="images/logo-libronet.svg" alt="Logo libronet"></figure>
         <div class="c-header__btn-wrap">
-          <button class="c-header__button i-cart" type="button"></button><span class="c-header__btn-counter js-cart-counter">0</span>
-          <div class="c-header__cart-wrap">
+          <button class="c-header__button js-btn-shoppin-cart i-cart" type="button"></button><span class="c-header__btn-counter js-cart-counter">0</span>
+          <div class="c-header__cart-wrap js-toggle-cart">
             <ul class="c-header__cart-list js-cart-list"></ul>
             <div class="c-header__cart-total js-cart-total">Total: 0</div>
           </div>
