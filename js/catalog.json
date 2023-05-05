@@ -32,12 +32,28 @@
     "precio": "55.450"
   },
   {
-    "titulo": "Interface Circuits for Microsensor Integrated Systems",
-    "autor": "Giuseppe Ferri , Vincenzo Stornelli (Eds.)",
+    "titulo": "Usted Puede ser lo Bueno que Quiera ser",
+    "autor": "Paul Arden",
+    "idioma": "Español",
+    "categoria": "Autoayuda",
+    "imagen": "https://images.cdn3.buscalibre.com/fit-in/360x360/a3/64/a3642f04ff6139dd56aef8b3b8cbc717.jpg",
+    "precio": "72.000"
+  },
+  {
+    "titulo": "De animales a dioses",
+    "autor": "Yuval Noah Harari",
+    "idioma": "Español",
+    "categoria": "Historia General Y Del Mundo",
+    "imagen": "https://images.cdn3.buscalibre.com/fit-in/360x360/6d/b0/6db053772d8f7fc88e0e523ecec3c528.jpg",
+    "precio": "64.800"
+  },
+  {
+    "titulo": "They Both die at the end (libro en Inglés)",
+    "autor": "Adam Silvera",
     "idioma": "Inglés",
-    "categoria": "Tecnología",
-    "imagen": "https://images.cdn1.buscalibre.com/fit-in/360x360/61/45/614548e593780a204fe4c31c045a284c.jpg",
-    "precio": "18.000"
+    "categoria": "Historia General Y Del Mundo",
+    "imagen": "https://images.cdn2.buscalibre.com/fit-in/360x360/fc/42/fc42b9cf6ea460b7a7f369b8d8632f0b.jpg",
+    "precio": "62.100"
   }
 
 ]
