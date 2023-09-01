@@ -14,7 +14,7 @@ async function mostrarCards(text = '', key) {
         <article class="c-card"> 
           <div class="c-card_wrap-img">
             <figure class="c-card_figure">
-              <img class="c-card_image" src="${card.imagen}" alt="${card.titulo}">
+              <img class="c-card_image js-card-image" src="${card.imagen}" alt="${card.titulo}">
             </figure>
           </div>
           <div class="c-card_caption"> 

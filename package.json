@@ -1,0 +1,11 @@
+{
+  "name": "libronet",
+  "version": "1.0.0",
+  "description": "Proyecto practiva de libreria",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Angelica Aguilar",
+  "license": "ISC"
+}

@@ -58,6 +58,15 @@
   @include px-to-rem(column-gap, $gutter);
   @include px-to-rem(margin-bottom, $gutter * 6);
 }
+.c-header__cart-wrapper {
+  display: flex;
+  align-items: center;
+  @include px-to-rem( column-gap, $gutter * 2);
+
+}
+.c-header__cart-image {
+  @include px-to-rem(max-width, 50px);
+}
 .c-header__cart-btn {
   border: 0;
   &::before {
